@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hexanode</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <style>
+        body {
+  overflow-x: hidden;
+}
+        .swiper {
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .swiper-slide img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain;
+        }
+        /* Navbar Section */
+        .custom-navbar {
+            background-color: #0a0e17;
+            padding: 15px 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .custom-navbar:hover {
+            background-color: white;
+        }
+
+        .navbar-brand {
+            color: white !important;
+            font-weight: bold;
+            font-size: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .custom-navbar:hover .navbar-brand {
+            color: black !important;
+        }
+
+        .btn-trial {
+            background-color: rgb(211, 16, 16);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .btn-trial:hover {
+            background-color: rgb(211, 16, 16);
+            color: white;
+        }
+
+        .nav-link {
+            color: white !important;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .custom-navbar:hover .nav-link {
+            color: black !important;
+        }
+
+        /* Kiosks Section */
+        .kiosks {
+            background-color: #0a0f1b;
+            color: white;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .container-custom {
+            max-width: 85rem;
+            width: 100%;
+        }
+      
+        .kiosks_wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 980px;
+        }
+        .text-section h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            line-height: 1.3;
+        }
+
+        .cta-form {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .cta-form input {
+            flex: 1;
+            min-width: 50px;
+            padding: 12px;
+            border-radius: 5px;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .cta-form button {
+            background-color: #e60028;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1rem;
+            white-space: nowrap;
+        }
+
+        .image-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-section img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media (max-width: 992px) {
+            .text-section {
+                text-align: center;
+            }
+
+            .cta-form {
+                justify-content: center;
+            }
+        }
+
+        /* Awards Section */
+        .awards-section {
+            background-color: #11131A;
+            color: white;
+            min-height: 100vh; /* Ensures the section is visible */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 50px 20px;
+        }
+
+        .card-custom {
+            background-color: transparent;
+            text-align: center;
+            padding: 20px;
+            border-right: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .card-custom:last-child {
+            border-right: none;
+        }
+
+        .hover-effect {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .hover-effect:hover {
+            transform: translateY(-10px);
+        }
+        .card-container {
+    background-color: #13151a;
+    padding: 50px 0;
+}
+.card {
+    background-color: #1c1e26;
+    color: white;
+    border: none;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+.card:hover {
+    transform: translateY(-10px);
+}
+.divider {
+    width: 1px;
+    background-color: #ffffff40;
+    height: 100px;
+    margin: auto;
+}
+
+
+
+
+.cards-container {
+    background-color: #1c1e26;
+    padding: 50px 0;
+}
+.card {
+    background-color: #1c1e26;
+    color: white;
+    border: none;
+    padding: 30px;
+    text-align: center;
+}
+.hover-text {
+    transition: transform 0.3s ease-in-out;
+    display: inline-block;
+}
+.hover-text:hover {
+    transform: translateY(-10px);
+}
+.divider {
+    width: 1px;
+    background-color: #ffffff40;
+    height: 100px;
+    margin: auto;
+}
+.tab-content {
+            background-color: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        .nav-tabs .nav-link {
+            color: black;
+            font-weight: 500;
+        }
+
+        .nav-tabs .nav-link.active {
+            background-color: black;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .content-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .content-wrapper .text-content {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .content-wrapper img {
+            max-width: 300px;
+            border-radius: 10px;
+        }
+
+
+
+        .tab-content {
+            padding: 30px;
+            border-radius: 10px;
+            background-color: #f8f9fa;
+            margin-top: 10px;
+        }
+
+        .nav-tabs {
+            border-bottom: none;
+        }
+
+        .nav-tabs .nav-link {
+            color: #6c757d !important;
+            font-weight: 500;
+            border: none;
+            padding: 10px 20px;
+        }
+
+        .nav-tabs .nav-link.active {
+            background-color: black;
+            color: white !important;
+            border-radius: 5px;
+        }
+
+        .content-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .content-wrapper .text-content {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .content-wrapper img {
+            max-width: 350px;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .content-wrapper {
+                flex-direction: column;
+                text-align: center;
+            }
+            .content-wrapper img {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+        .feature-section {
+            padding: 50px 0;
+        }
+        .feature-img {
+            border-radius: 10px;
+            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+        }
+        .feature-list h2 {
+            font-size: 1.9rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .feature-list h3 {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .feature-list p {
+            color: #666;
+            font-size: 1rem;
+        }
+        .feature-list a {
+            color: red;
+            font-weight: bold;
+            font-size: 1rem;
+            text-decoration: none;
+        }
+        .feature-list a:hover {
+            text-decoration: underline;
+        }
+        .feature-list hr {
+            margin: 15px 0;
+            border-top: 1px solid #ddd;
+        }
+        .testimonial-section {
+            background-color: #f8f9fa;
+            padding: 50px 0;
+            text-align: center;
+        }
+        .testimonial-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+        }
+        .testimonial-image {
+            border-radius: 10px;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+        .testimonial-content {
+            text-align: left;
+        }
+        .carousel-control-prev,
+        .carousel-control-next {
+            background-color: black;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+        }
+        .testimonial-section {
+            background-color: #f8f9fa;
+            padding: 50px 0;
+            text-align: center;
+        }
+        .testimonial-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+        }
+        .testimonial-image {
+            border-radius: 10px;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+        .testimonial-content {
+            text-align: left;
+        }
+        .carousel-control-prev,
+        .carousel-control-next {
+            background-color: black;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+        }
+
+    
+        /* Carousel container */
+        .carousel {
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+            max-width: 600px;
+            margin: auto;
+            position: relative;
+        }
+
+        /* Individual testimonial */
+        .testimonial {
+            min-width: 100%;
+            box-sizing: border-box;
+            padding: 20px;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        /* Testimonial content */
+        .testimonial-content {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Navigation buttons */
+        .nav-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        .platforms-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .platforms-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .platform-icons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .platform-icons .platform-item {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 120px;
+            height: 80px;
+            overflow: hidden;
+        }
+        .platform-icons img {
+            width: 50px;
+            height: auto;
+            transition: transform 0.3s ease-in-out;
+        }
+        .platform-icons img:hover {
+            transform: translateY(-10px);
+        }
+
+        .signup-container {
+           
+            margin: auto;
+            padding: 30px;
+            text-align: center;
+            background-color: #0a0e17;
+        }
+        .signup-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color:white;
+        }
+        .signup-form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        .signup-input {
+            width: 23%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+        }
+        .signup-button {
+            background-color: #d0021b;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .signup-button:hover {
+            background-color: #b00017;
+        }
+        .signup-note {
+            font-size: 14px;
+            margin-top: 10px;
+            color: #ccc;
+        }
+        .signup-note a {
+            color: #ff3b3b;
+            text-decoration: none;
+        }
+        .signup-note a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            background-color: #f8f9fa;
+            padding: 10px 0;
+            text-align: center;
+            font-size: 14px;
+            color: #6c757d;
+        }
+        .footer a {
+            color: #6c757d;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .footer .copyright {
+            margin-top: 5px;
+        }
+
+        .containers {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color:#0a0f1b;
+        }
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .text-section {
+            max-width: 500px;
+        }
+        .text-section h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            color:white;
+        }
+        .form-section {
+            margin-top: 20px;
+        }
+        .devices img {
+            max-width: 100%;
+            height: auto;
+        }
+        .btn-custom {
+            background-color: #E50914;
+            border: none;
+            padding: 10px 20px;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+   
+</head>
+<body>
+
+<!-- Navbar Section -->
+ 
+<nav class="custom-navbar navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">hexnode</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item d-lg-none">
+                    <a class="btn-trial d-block text-center my-2" href="#">14 DAY FREE TRIAL</a>
+                </li>
+                <li class="nav-item d-lg-none">
+                    <a class="nav-link text-center" href="#">Login</a>
+                </li>
+            </ul>
+        </div>
+        <a class="btn-trial d-none d-lg-block" href="#">14 DAY FREE TRIAL</a>
+    </div>
+</nav>
+
+<!-- Kiosks Section -->
+<div class="containers">
+    <div class="content row">
+        <div class="text-section col-md-6">
+            <h1>Turn your devices into kiosks in a few minutes with Hexnode UEM</h1>
+            <div class="form-section">
+                <input type="email" class="form-control" placeholder="Your Work Email">
+                <button class="btn btn-custom mt-2">GET STARTED NOW!</button>
+            </div>
+        </div>
+        <div class="devices col-md-6 text-center">
+            <img src="images/hexnode-kiosk.png" alt="Devices">
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid cards-container">
+    <div class="row text-center">
+        <!-- IDC Card -->
+        <div class="col-md-4 d-flex justify-content-center">
+            <div class="card w-100">
+                <h4><img src="images/idc.png"  width="50"></h4>
+                <p class="hover-text" data-aos="fade-up">Hexnode is listed as a leader and a major player in IDC MarketScape UEM Vendors Assessment Reports 2024.</p>
+            </div>
+        </div>
+        
+        <!-- Gartner Card -->
+        <div class="col-md-4 d-flex justify-content-center">
+            <div class="divider d-none d-md-block"></div>
+            <div class="card w-100">
+                <h4>Gartner</h4>
+                <p class="hover-text" data-aos="fade-up">Hexnode was recognized in the 2023 Gartner® Market Guide for Unified Endpoint Management Tools.</p>
+            </div>
+        </div>
+        
+        <!-- Forrester Card -->
+        <div class="col-md-4 d-flex justify-content-center">
+            <div class="divider d-none d-md-block"></div>
+            <div class="card w-100">
+                <h4>Forrester</h4>
+                <p class="hover-text" data-aos="fade-up">Forrester includes Hexnode as a Notable vendor in The Unified Endpoint Management Landscape, Q3 2023.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Specific Kiosk Modes for Unique Use Cases</h2>
+
+    <!-- Tabs Navigation -->
+    <ul class="nav nav-tabs justify-content-center" id="kioskTabs">
+        <li class="nav-item">
+            <a class="nav-link active" data-bs-toggle="tab" href="#single-app">Single App Kiosk</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#multi-app">Multi-App Kiosk</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#web-kiosk">Web-based Kiosk</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#digital-signage">Digital Signages</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#asam-kiosk">ASAM Kiosk</a>
+        </li>
+    </ul>
+
+    <!-- Tab Content -->
+    <div class="tab-content">
+        <!-- Single App Kiosk -->
+        <div id="single-app" class="tab-pane fade show active">
+            <div class="content-wrapper">
+                <div class="text-content">
+                    <h3>Powerful Single-App Kiosk solutions for enhanced control</h3>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-check-circle-fill text-success"></i> Customize the device settings to cater to a specific use-case each time.</li>
+                        <li><i class="bi bi-check-circle-fill text-success"></i> Use Hexnode’s Advanced Kiosk settings for additional restrictions or expanded device functionalities while in kiosk mode.</li>
+                        <li> <i class="bi bi-check-circle-fill text-success"></i> Hexnode’s Kiosk settings provide extra security.</li>
+                        <li><i class="bi bi-check-circle-fill text-success"></i> Empower your administrators with full control over the kiosk devices.</li>
+                    </ul>
+                </div>
+                <img src="images/single-app-kios-image.jpeg" alt="Single App Kiosk">
+            </div>
+        </div>
+
+        <!-- Multi-App Kiosk -->
+        <div id="multi-app" class="tab-pane fade">
+            <div class="content-wrapper">
+                <div class="text-content">
+                    <h3>Elevate efficiency with Multi-App Kiosk</h3>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-check-circle-fill text-success"></i> Limit device access to approved apps, ensuring focus and productivity.</li>
+                        <li><i class="bi bi-check-circle-fill text-success"></i> With default phone and settings app inclusion, reduce distractions by providing users access to essential functions only.</li>
+                        <li> <i class="bi bi-check-circle-fill text-success"></i> With Hexnode's peripheral settings admins can allow necessary device settings while retaining control.</li>
+                        <li><i class="bi bi-check-circle-fill text-success"></i> Simplify device management while empowering user productivity by deploying Multi-App Kiosk Mode.</li>
+                    </ul>
+                </div>
+                <img src="images/multi-app-kiosk-image.jpeg" alt="Multi-App Kiosk">
+            </div>
+        </div>
+
+        <!-- Web-based Kiosk -->
+        <div id="web-kiosk" class="tab-pane fade">
+            <div class="content-wrapper">
+                <div class="text-content">
+                    <h3>Explore the new way to manage web apps and websites</h3>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-check-circle-fill text-success"></i> Let users access essential and approved web apps, website and files only.</li>
+                        <li><i class="bi bi-check-circle-fill text-success"></i> Make the best use of website kiosk with Hexnode's advanced settings.</li>
+                        <li> <i class="bi bi-check-circle-fill text-success"></i> Tailor your experience to match your unique use case.</li>
+                        <li><i class="bi bi-check-circle-fill text-success"></i> From configuring toolbar options to scheduling page refresh, remote debugging, and limiting incognito tabs, take full control of your website kiosk experience.</li>
+                    </ul>
+                </div>
+                <img src="images/web-based-kiosk-image.jpeg" alt="Web-based Kiosk">
+            </div>
+        </div>
+
+        <!-- Digital Signages -->
+        <div id="digital-signage" class="tab-pane fade">
+            <div class="content-wrapper">
+                <div class="text-content">
+                    <h3>Capture attention with Digital Signage Kiosks</h3>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-check-circle-fill text-success"></i> Transform your devices into captivating digital signage kiosks that grab attention.</li>
+                        <li><i class="bi bi-check-circle-fill text-success"></i> Engage your audience with vibrant images and seamless video streaming.</li>
+                        <li> <i class="bi bi-check-circle-fill text-success"></i> Customize media files with trimming, muting, and background music.</li>
+                        <li><i class="bi bi-check-circle-fill text-success"></i> Advertise and show off your brand aesthetics to attract customers in different ways.</li>
+                        <li><i class="bi bi-check-circle-fill text-success"></i> Take control with Hexnode to reestablish your brand's presence.</li>
+                    </ul>
+                </div>
+                <img src="images/digital-signage-kiosk-image.jpeg" alt="Digital Signage">
+            </div>
+        </div>
+
+        <!-- ASAM Kiosk -->
+        <div id="asam-kiosk" class="tab-pane fade">
+            <div class="content-wrapper">
+                <div class="text-content">
+                    <h3>Unlock the power of Autonomous Single App Mode (ASAM)</h3>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-check-circle-fill text-success"></i> A feature that empowers your iOS app to seamlessly secure itself in the foreground.</li>
+                        <li><i class="bi bi-check-circle-fill text-success"></i> Transform tablets or devices into dedicated point-of-sale (POS) systems by preventing interruptions from other applications or notifications.</li>
+                        <li> <i class="bi bi-check-circle-fill text-success"></i> Create focused, efficient and secure digital environments to match your requirements.</li>
+                        <li><i class="bi bi-check-circle-fill text-success"></i> Configure ASAM effortlessly and elevate your user experience like never before.</li>
+
+                    </ul>
+                </div>
+                <img src="images/asam-kiosk-image.jpeg" alt="ASAM Kiosk">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container feature-section">
+    <h2 class="text-center text-dark mb-4">What additional possibilities does the Kiosk mode offer?</h2>
+    <div class="row align-items-center">
+        <!-- Left Side - Image -->
+        <div class="col-md-6 text-center">
+            <img src="images/effortless-kiosk-deployement-image.jpeg" alt="Kiosk Mode Image" class="img-fluid feature-img" style="width:26rem;">
+        </div>
+
+        <!-- Right Side - Content -->
+        <div class="col-md-6 feature-list">
+        
+            
+            <h3>Effortless kiosk deployment & management</h3>
+            <p>Deploy kiosk-enabled devices straight out of the box. Flash a custom Android Enterprise, Samsung Knox or ROM with Hexnode App on the devices by collaborating with OEM vendors who provide specially configured ROMs.</p>
+            <a href="#">TRY FOR FREE &gt;</a>
+            <hr>
+
+            <h3>Customized interface for brand visibility</h3>
+            <hr>
+
+            <h3>What more can you do with Hexnode kiosk?</h3>
+            <hr>
+
+            <h3>Secure and update your app ecosystem</h3>
+            <hr>
+
+            <h3>Provide an easy-to-use interface for end-users</h3>
+        </div>
+    </div>
+</div>
+
+
+<section class="testimonial-section">
+    <div class="container">
+        <h2>Why should you choose Hexnode?</h2>
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="10000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="d-flex justify-content-center">
+                        <div class="testimonial-card d-flex">
+                            <img src="images/dalibor-kruljac.png" alt="User" class="testimonial-image">
+                            <div class="testimonial-content">
+                                <p><strong>"Most complete MDM solution I found, and I tested many of them, including major names"</strong></p>
+                                <p><strong>Dalibor Kruljac</strong><br>KAMELEYA LTD</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-center">
+                        <div class="testimonial-card d-flex">
+                            <img src="images/chris-robinson.png" alt="User" class="testimonial-image">
+                            <div class="testimonial-content">
+                                <p><strong>"It seemed to be in-line with everything we were looking at"</strong></p>
+                                <p><strong>Chris Robinson</strong><br>Executive Account Manager, NCS</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-center">
+                        <div class="testimonial-card d-flex">
+                            <img src="images/justin-modrak.png" alt="User" class="testimonial-image">
+                            <div class="testimonial-content">
+                                <p><strong>"Hexnode is of great value. Works great with Android and iOS!"</strong></p>
+                                <p><strong>Justin Modark</strong><br>Technology Coordinator<br>East Tray Community School District</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--<button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>-->
+            <!--<button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>-->
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="images/gorillas.svg" alt="Logo 1"></div>
+        <div class="swiper-slide"><img src="images/hilton.svg" alt="Logo 2"></div>
+        <div class="swiper-slide"><img src="images/lowes.svg" alt="Logo 3"></div>
+        <div class="swiper-slide"><img src="images/marriott-intl.svg" alt="Logo 4"></div>
+        <div class="swiper-slide"><img src="images/wolt.svg" alt="Logo 5"></div>
+        <div class="swiper-slide"><img src="images/merck.svg" alt="Logo 6"></div>
+        <div class="swiper-slide"><img src="images/gorillas.svg" alt="Logo 7"></div>
+        <div class="swiper-slide"><img src="images/hilton.svg" alt="Logo 8"></div>
+        <div class="swiper-slide"><img src="images/merck.svg" alt="Logo 9"></div>
+        <div class="swiper-slide"><img src="images/lowes.svg" alt="Logo 10"></div>
+        <div class="swiper-slide"><img src="images/marriott-intl.svg" alt="Logo 11"></div>
+        <div class="swiper-slide"><img src="images/hilton.svg" alt="Logo 12"></div>
+        <div class="swiper-slide"><img src="images/lowes.svg" alt="Logo 13"></div>
+        <div class="swiper-slide"><img src="images/wolt.svg" alt="Logo 14"></div>
+        <div class="swiper-slide"><img src="images/lowes.svg" alt="Logo 15"></div>
+        <div class="swiper-slide"><img src="images/hilton.svg" alt="Logo 16"></div>
+        <div class="swiper-slide"><img src="images/marriott-intl.svg" alt="Logo 17"></div>
+        <div class="swiper-slide"><img src="images/wolt.svg" alt="Logo 18"></div>
+        <div class="swiper-slide"><img src="images/hilton.svg" alt="Logo 19"></div>
+    </div>
+</div>
+
+<div class="platforms-container text-center">
+    <div class="platforms-title">Platforms supported</div>
+    <div class="platform-icons d-flex flex-wrap justify-content-center">
+        <div class="platform-item" data-aos="fade-up"><img src="images/android.svg" alt="Android" class="w-100"></div>
+        <div class="platform-item" data-aos="fade-up"><img src="images/windows.svg" alt="Windows" class="w-100"></div>
+        <div class="platform-item" data-aos="fade-up"><img src="images/ios.svg" alt="iOS" class="w-100"></div>
+        <div class="platform-item" data-aos="fade-up"><img src="images/android-tv.svg" alt="Android TV" class="w-100"></div>
+        <div class="platform-item" data-aos="fade-up"><img src="images/apple-tv.svg" alt="Apple TV" class="w-100"></div>
+        <div class="platform-item" data-aos="fade-up"><img src="images/amazon-fire.png" alt="Fire TV" class="w-100"></div>
+    </div>
+</div>
+<div class="signup-container">
+    <div class="signup-title">Sign up and try Hexnode free for 14 days!</div>
+    <form class="signup-form">
+        <input type="email" class="signup-input" placeholder="Your Work Email" required>
+        <button type="submit" class="signup-button">GET STARTED</button>
+    </form>
+    <div class="signup-note">No credit cards required. <a href="#">Request a demo &gt;</a></div>
+</div>
+
+<footer class="footer container-fluid">
+    <div class="row">
+        <div class="col-md-6 text-center">
+            <a href="#">Terms of Use</a> -
+            <a href="#">Privacy</a> -
+            <a href="#">Cookies</a>
+        </div>
+        <div class="col-md-6 text-center copyright">
+            &copy; 2024 Mitsogo Inc. All Rights Reserved.
+        </div>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 5,  // Adjust number of visible logos
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+        breakpoints: {
+            320: { slidesPerView: 2, spaceBetween: 10 },  // Mobile
+            768: { slidesPerView: 3, spaceBetween: 20 },  // Tablet
+            1024: { slidesPerView: 5, spaceBetween: 30 }  // Desktop
+        }
+    });
+</script>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 4,
+        spaceBetween: 20,
+        loop: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            320: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 4 }
+        }
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
+</body>
+</html>
